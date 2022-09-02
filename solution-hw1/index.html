@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
-  <title>Bun Bun Bake Shop - Home</title>
+  <head>
+    <title>Bun Bun Bake Shop - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  
   
   <body>
     <header>
       This is the header.
-      <div id="header-container">
-        Hello
+      <div class="header-container">
+        <div class="header-left">
+          <img class="logo" src="HW1-assets/logo/logo-01.svg" alt="Bun Bun bake shop logo">
+        </div>
+        <div class="header-right">
+          <nav>
+            <ul>
+              <li class="active">PRODUCTS</li>
+              <li>CART</li>
+            </ul>
+            <hr></hr>
+          </nav>
+          <h2>
+            Our hand-made cinnamon rolls
+          </h2>
+        </div>
       </div>
     </header>
 
 
-    <h1>I am the solution to HW1!</h1>
+    This is the actual body content.
+    <div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="HW1-assets/products/original-cinnamon-roll.jpg">
+          <h5>Original cinnamon roll</h5>
+          <form action="/action_page.php">
+            <fieldset>
 
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="radio1">
+              <label class="radio-button-label" for="radio1">1</label>
+              
+              <input type="radio" name="radio" id="radio3">
+              <label class="radio-button-label" for="radio3">3</label>
+              
+              <input type="radio" name="radio" id="radio6">
+              <label class="radio-button-label" for="radio6">6</label>
+
+              <input type="radio" name="radio" id="radio12">
+              <label class="radio-button-label" for="radio12">12</label>
+             </div>
+
+             <div class="price">$2.49</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>  
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </div>
+
+
 
   </body>
 </html>
