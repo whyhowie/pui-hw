@@ -8,8 +8,8 @@
   
   
   <body>
+    <!-- This is the header. -->
     <header>
-      This is the header.
       <div class="header-container">
         <div class="header-left">
           <img class="logo" src="HW1-assets/logo/logo-01.svg" alt="Bun Bun bake shop logo">
@@ -17,8 +17,8 @@
         <div class="header-right">
           <nav>
             <ul>
-              <li class="active">PRODUCTS</li>
-              <li>CART</li>
+              <li><a href="#" class="active">PRODUCTS</a></li> 
+              <li><a href="#" class="inactive">CART</a></li>
             </ul>
             <hr></hr>
           </nav>
@@ -30,13 +30,13 @@
     </header>
 
 
-    This is the actual body content.
+    <!-- This is the actual body content. -->
     <div>
       <div class="grid-container">
         <div class="grid-item">
           <img src="HW1-assets/products/original-cinnamon-roll.jpg">
           <h5>Original cinnamon roll</h5>
-          <form action="/action_page.php">
+          <form id="original-cinnamon-roll">
             <fieldset>
 
              <label for="glazing">Glazing:</label>
@@ -50,17 +50,17 @@
              <label for="radio-group">Pack size:</label>
              <div class="radio-group">
               
-              <input type="radio" name="radio" id="radio1">
-              <label class="radio-button-label" for="radio1">1</label>
+              <input type="radio" name="radio" id="ocr1">
+              <label class="radio-button-label" for="ocr1">1</label>
               
-              <input type="radio" name="radio" id="radio3">
-              <label class="radio-button-label" for="radio3">3</label>
+              <input type="radio" name="radio" id="ocr3">
+              <label class="radio-button-label" for="ocr3">3</label>
               
-              <input type="radio" name="radio" id="radio6">
-              <label class="radio-button-label" for="radio6">6</label>
+              <input type="radio" name="radio" id="ocr6">
+              <label class="radio-button-label" for="ocr6">6</label>
 
-              <input type="radio" name="radio" id="radio12">
-              <label class="radio-button-label" for="radio12">12</label>
+              <input type="radio" name="radio" id="ocr12">
+              <label class="radio-button-label" for="ocr12">12</label>
              </div>
 
              <div class="price">$2.49</div>
@@ -68,11 +68,193 @@
             </fieldset>
            </form>
         </div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>  
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
+
+
+
+        <div class="grid-item">
+          <img src="HW1-assets/products/apple-cinnamon-roll.jpg">
+          <h5>Apple cinnamon roll</h5>
+          <form id="apple-cinnamon-roll">
+            <fieldset>
+
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="acr1">
+              <label class="radio-button-label" for="acr1">1</label>
+              
+              <input type="radio" name="radio" id="acr3">
+              <label class="radio-button-label" for="acr3">3</label>
+              
+              <input type="radio" name="radio" id="acr6">
+              <label class="radio-button-label" for="acr6">6</label>
+
+              <input type="radio" name="radio" id="acr12">
+              <label class="radio-button-label" for="acr12">12</label>
+             </div>
+
+             <div class="price">$3.49</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>
+
+
+
+        <div class="grid-item">
+          <img src="HW1-assets/products/raisin-cinnamon-roll.jpg">
+          <h5>Raisin cinnamon roll</h5>
+          <form id="raisin-cinnamon-roll">
+            <fieldset>
+
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="rcr1">
+              <label class="radio-button-label" for="rcr1">1</label>
+              
+              <input type="radio" name="radio" id="rcr3">
+              <label class="radio-button-label" for="rcr3">3</label>
+              
+              <input type="radio" name="radio" id="rcr6">
+              <label class="radio-button-label" for="rcr6">6</label>
+
+              <input type="radio" name="radio" id="rcr12">
+              <label class="radio-button-label" for="rcr12">12</label>
+             </div>
+
+             <div class="price">$2.99</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>  
+        
+        
+        <div class="grid-item">
+          <img src="HW1-assets/products/walnut-cinnamon-roll.jpg">
+          <h5>Walnut cinnamon roll</h5>
+          <form id="walnut-cinnamon-roll">
+            <fieldset>
+
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="wcr1">
+              <label class="radio-button-label" for="wcr1">1</label>
+              
+              <input type="radio" name="radio" id="wcr3">
+              <label class="radio-button-label" for="wcr3">3</label>
+              
+              <input type="radio" name="radio" id="wcr6">
+              <label class="radio-button-label" for="wcr6">6</label>
+
+              <input type="radio" name="radio" id="wcr12">
+              <label class="radio-button-label" for="wcr12">12</label>
+             </div>
+
+             <div class="price">$3.49</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>  
+
+
+        <div class="grid-item">
+          <img src="HW1-assets/products/double-chocolate-cinnamon-roll.jpg">
+          <h5>Double-chocolate cinnamon roll</h5>
+          <form id="double-chocolate-cinnamon-roll">
+            <fieldset>
+
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="dccr1">
+              <label class="radio-button-label" for="dccr1">1</label>
+              
+              <input type="radio" name="radio" id="dccr3">
+              <label class="radio-button-label" for="dccr3">3</label>
+              
+              <input type="radio" name="radio" id="dccr6">
+              <label class="radio-button-label" for="dccr6">6</label>
+
+              <input type="radio" name="radio" id="dccr12">
+              <label class="radio-button-label" for="dccr12">12</label>
+             </div>
+
+             <div class="price">$3.99</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>  
+        
+        
+        <div class="grid-item">
+          <img src="HW1-assets/products/strawberry-cinnamon-roll.jpg">
+          <h5>Strawberry cinnamon roll</h5>
+          <form id="strawberry-cinnamon-roll">
+            <fieldset>
+
+             <label for="glazing">Glazing:</label>
+             <select name="glazing" id="glazing">
+              <option value="keepOriginal">Keep Original</option>
+              <option value="sugarMilk">Sugar Milk</option>
+              <option value="vanillaMilk">Vanilla Milk</option>
+              <option value="doubleChocolate">Double Chocolate</option>
+             </select>
+
+             <label for="radio-group">Pack size:</label>
+             <div class="radio-group">
+              
+              <input type="radio" name="radio" id="scr1">
+              <label class="radio-button-label" for="scr1">1</label>
+              
+              <input type="radio" name="radio" id="scr3">
+              <label class="radio-button-label" for="scr3">3</label>
+              
+              <input type="radio" name="radio" id="scr6">
+              <label class="radio-button-label" for="scr6">6</label>
+
+              <input type="radio" name="radio" id="scr12">
+              <label class="radio-button-label" for="scr12">12</label>
+             </div>
+
+             <div class="price">$3.99</div>
+             <input type="button" value="Add to Cart" onclick="addToCart()">
+            </fieldset>
+           </form>
+        </div>  
       </div>
     </div>
 
