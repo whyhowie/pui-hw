@@ -1,0 +1,181 @@
+body {
+    /* background-color: gray; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    max-width: 1200px;
+    min-width: 900px;
+    margin: auto;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.header-container {
+    display: flex;
+    /* background-color: azure; */
+    margin: 20px;
+}
+
+
+
+.header-left {
+    /* background-color: blue; */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left .logo {
+    --logo-width-percent: 80%;
+    width: var(--logo-width-percent);
+}
+
+.header-right {
+    /* background-color: magenta; */
+    width: 70%;
+}
+
+
+nav {
+    width: 100%;
+    /* background-color: red; */
+}
+nav ul {
+    display: flex;
+    /* width: 100%; */
+    justify-content: right;
+}
+nav li {
+    /* float: right; */
+    display: inline;
+    padding: 0 10%;
+    margin: 0 5%;
+    vertical-align: middle;
+    /* background-color: aqua; */
+}
+
+nav hr {
+    height: 2px;
+    border-width: 0;
+    background-color: black;
+}
+
+nav a {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+nav .active {
+    background-color: lightgray;
+}
+nav a:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+
+
+.grid-container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    /* background-color: lightskyblue; */
+}
+
+.grid-item {
+    width: 90%;
+    margin: auto;
+    /* background-color: lightgoldenrodyellow; */
+    /* border: 1px solid black; */
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-item > img {
+    width: 60%;
+    border: 1px solid black;
+    margin: auto;
+    margin-bottom: -10%;
+}
+
+form {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: -10%;
+    /* background-color: brown; */
+}
+
+fieldset {
+    display: grid;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    /* align-items: center; */
+    margin-left: auto;
+    margin-right: auto; 
+    grid-template-columns:  30% 60%;
+    grid-gap: 5px;
+    border: 0px;
+}
+fieldset > label {
+    display: flex;
+    /* background-color: bisque; */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    align-items: center;
+}
+fieldset input[type="button"]:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+fieldset .price {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+
+.radio-group {
+    display: flex;
+    /* background-color: red; */
+}
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    width: 18px;
+    margin: auto;
+    justify-content: space-evenly;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.radio-group label:nth-child(2) {
+    margin-left: 0;
+}
+.radio-group label:last-child {
+    margin-right: 0;    
+}
+.radio-group label:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background: gray;
+}
