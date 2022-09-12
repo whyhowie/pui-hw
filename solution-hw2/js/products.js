@@ -20,7 +20,7 @@ class Roll {
 // GENERATE ROLL OBJECTS
 // (DON'T FORGET TO UPDATE THE Rolls ARRAY AT THE END)
 const originalCinnamon = new Roll(
-    'assets/products/original-cinnamon-roll.jpg',   // image
+    '../assets/products/original-cinnamon-roll.jpg',   // image
     'Original Cinnamon Roll',   // type (name)
     2.49,   // price
     'Keep Original', // glazing
@@ -29,7 +29,7 @@ const originalCinnamon = new Roll(
 )
 
 const appleCinnamon = new Roll(
-    'assets/products/apple-cinnamon-roll.jpg',
+    '../assets/products/apple-cinnamon-roll.jpg',
     'Apple Cinnamon Roll',
     3.49,
     'Keep Original',
@@ -38,7 +38,7 @@ const appleCinnamon = new Roll(
 )
 
 const raisinCinnamon = new Roll(
-    'assets/products/raisin-cinnamon-roll.jpg',
+    '../assets/products/raisin-cinnamon-roll.jpg',
     'Raisin Cinnamon Roll',
     2.99,
     'Keep Original',
@@ -47,7 +47,7 @@ const raisinCinnamon = new Roll(
 )
 
 const walnutCinnamon = new Roll(
-    'assets/products/walnut-cinnamon-roll.jpg',
+    '../assets/products/walnut-cinnamon-roll.jpg',
     'Walnut Cinnamon Roll',
     2.49,
     'Keep Original',
@@ -56,7 +56,7 @@ const walnutCinnamon = new Roll(
 )
 
 const doubleChocolateCinnamon = new Roll(
-    'assets/products/double-chocolate-cinnamon-roll.jpg',
+    '../assets/products/double-chocolate-cinnamon-roll.jpg',
     'Double Chocolate Cinnamon Roll',
     3.49,
     'Keep Original',
@@ -65,7 +65,7 @@ const doubleChocolateCinnamon = new Roll(
 )
 
 const strawberryCinnamon = new Roll(
-    'assets/products/strawberry-cinnamon-roll.jpg',
+    '../assets/products/strawberry-cinnamon-roll.jpg',
     'Strawberry Cinnamon Roll',
     2.99,
     'Keep Original',

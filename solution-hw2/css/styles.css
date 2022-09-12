@@ -49,15 +49,18 @@ nav {
 nav ul {
     display: flex;
     /* width: 100%; */
-    justify-content: right;
+    /* background-color: red; */
+    
 }
 nav li {
     position: relative;
-    display: inline;
-    padding: 0 10%;
-    margin: 0 5%;
-    vertical-align: middle;
+    display: block;
+    width: 150px;
+    margin-right: 10%;
+    margin-left: auto;
+    text-align: right;
     /* background-color: aqua; */
+    justify-content: space-around;
 }
 
 nav hr {
@@ -188,16 +191,22 @@ fieldset .price {
 /* Cart Info */
 .cart-info {
     font-size: 12px;
-    /* font-weight: bold; */
+    /* background-color: sienna; */
+    padding: 10px;
+    width: auto;
+    /* margin-right: 30%; */
+    margin-left: auto;
+    font-weight: bold;
+    float: inline-end;
     text-align: right;
-    align-items: flex-end;
 }
 
 /* Cart Popup */
 .cart-popup {
     position: absolute;
     /* Note: it's parent element needs "relative" position */
-    top: 50px;
+    text-align: left;
+    top: 80px;
     right: 10%;
     z-index: 10;
     background-color: white;
