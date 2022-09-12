@@ -56,7 +56,6 @@ let packSize = 1;
 function glazingChange(element) {
     // get value of selected glazing option
     priceChange = parseFloat(element.value);
-    // console.log(priceChange);
 
     // select the corresponding roll item
     rollID = element.id.replace('glazing-','');
@@ -64,7 +63,8 @@ function glazingChange(element) {
 
     // find the coreesponding roll object
     selectedRoll = Rolls.find(x => x.elementID === rollID);
-    selectedRoll.glazing = element.textContent;
+    selectedRoll.glazing = element.options[element.selectedIndex].text;
+        //https://stackoverflow.com/questions/14976495/get-selected-option-text-with-javascript
 
     // calculate new price
     let newPrice = selectedRoll.packSize * (selectedRoll.price + priceChange);
