@@ -22,7 +22,7 @@ p {
 }
 
 
-
+/* Header */
 .header-left {
     /* background-color: blue; */
     width: 30%;
@@ -41,7 +41,7 @@ p {
     width: 70%;
 }
 
-
+/* Navigation Bar */
 nav {
     width: 100%;
     /* background-color: red; */
@@ -52,7 +52,7 @@ nav ul {
     justify-content: right;
 }
 nav li {
-    /* float: right; */
+    position: relative;
     display: inline;
     padding: 0 10%;
     margin: 0 5%;
@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 
-
+/* Page overall layout (grid) */
 .grid-container {
     width: 95%;
     margin: auto;
@@ -142,13 +142,17 @@ fieldset input[type="button"]:hover {
     background-color: yellow;
 }
 
+
+/* Price */
 fieldset .price {
+    display: block;
     font-size: 18px;
     font-weight: bolder;
     text-align: left;
+    width: 5em;
 }
 
-
+/* Pack Size radio buttons */
 .radio-group {
     display: flex;
     /* background-color: red; */
@@ -178,4 +182,43 @@ fieldset .price {
 
 .radio-group input[type="radio"]:checked + label {
     background: gray;
+}
+
+
+/* Cart Info */
+.cart-info {
+    font-size: 12px;
+    /* font-weight: bold; */
+    text-align: right;
+    align-items: flex-end;
+}
+
+/* Cart Popup */
+.cart-popup {
+    position: absolute;
+    /* Note: it's parent element needs "relative" position */
+    top: 50px;
+    right: 10%;
+    z-index: 10;
+    background-color: white;
+    opacity: 0;
+    width: 200px;
+    color: black;
+    border: black solid 1px;
+    padding: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.show {
+    opacity: 1;
+    transition: opacity 1s ease-in-out, ;
+}
+
+.popuptext {
+    font-size: 12px;
+    /* font-weight: bold; */
+    text-align: left;
+    align-items: left;
 }
