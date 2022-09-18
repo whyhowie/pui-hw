@@ -7,7 +7,8 @@ function Navbar() {
         <header className="header">
             <div className="header-container">
                 <div className="header-left">
-                <img className="logo" src={"./assets/logo/logo-01.svg"} alt="Bun Bun bake shop logo" />
+                <img className="logo" src={process.env.PUBLIC_URL + "/assets/logo/logo-01.svg"} alt="Bun Bun bake shop logo" />
+                {/* use process.env.PUBLIC_URL */}
                 </div>
                 <div className="header-right">
                 <nav>
