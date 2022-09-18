@@ -28,6 +28,8 @@ function Grid() {
         gridContent.push(
             <div className="grid-item" id={eachRoll.elementID}>
                 <img src={eachRoll.imgSrc} alt={eachRoll.type}/>
+                {/* <img src={require(eachRoll.imgSrc)} alt={eachRoll.type}/> */}
+                
                 <h5>{eachRoll.type}</h5>
                 <form id={eachRoll.elementID + "-form"}>
                     <fieldset>

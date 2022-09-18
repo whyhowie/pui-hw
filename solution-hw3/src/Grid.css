@@ -23,6 +23,9 @@
 
 .grid-item > img {
     width: 60%;
+    /* height: 0; */
+    /* padding-bottom: 60%; */
+    /* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
     max-width: 300px;
     border: 1px solid black;
     margin: auto;
