@@ -1,0 +1,118 @@
+/* Page overall layout (grid) */
+.grid-container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    /* background-color: lightskyblue; */
+}
+
+.grid-item {
+    width: 100%;
+    margin: auto;
+    background-color: lightgoldenrodyellow;
+    /* border: 1px solid black; */
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-item > img {
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    /* margin-bottom: -10%; */
+}
+
+.grid-item > 
+
+form {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: -10%;
+    /* background-color: brown; */
+}
+
+fieldset {
+    display: grid;
+    width: 80px;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    /* align-items: center; */
+    /* margin-left: -10%; */
+    /* margin-right: -10%; */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 0px;
+    padding: 10px;
+    grid-gap: 5px;
+    grid-template-columns:  30% 50%;
+    
+}
+fieldset > label {
+    display: flex;
+    background-color: bisque;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    align-items: center;
+}
+/* fieldset option {
+    font-size: 10px;
+} */
+
+fieldset input[type="button"]:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+/* Price */
+fieldset .price {
+    display: block;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: left;
+    width: 5em;
+}
+
+/* Pack Size radio buttons */
+.radio-group {
+    display: flex;
+    /* background-color: red; */
+}
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    width: 18px;
+    margin: auto;
+    justify-content: space-evenly;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.radio-group label:nth-child(2) {
+    margin-left: 0;
+}
+.radio-group label:last-child {
+    margin-right: 0;    
+}
+.radio-group label:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background: gray;
+}
+
