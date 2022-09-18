@@ -13,7 +13,7 @@
 .grid-item {
     width: 100%;
     margin: auto;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     /* border: 1px solid black; */
     padding-top: 20px;
     font-size: 30px;
@@ -60,7 +60,7 @@ fieldset {
 }
 fieldset > label {
     display: flex;
-    background-color: bisque;
+    /* background-color: bisque; */
     font-size: 10px;
     font-weight: bold;
     text-align: left;
