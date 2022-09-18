@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pui-hw/solution-hw3/static/css/main.f595d171.css",
+    "main.css": "/pui-hw/solution-hw3/static/css/main.a6657865.css",
     "main.js": "/pui-hw/solution-hw3/static/js/main.95fdc632.js",
     "static/js/787.e7d93d16.chunk.js": "/pui-hw/solution-hw3/static/js/787.e7d93d16.chunk.js",
     "index.html": "/pui-hw/solution-hw3/index.html",
-    "main.f595d171.css.map": "/pui-hw/solution-hw3/static/css/main.f595d171.css.map",
+    "main.a6657865.css.map": "/pui-hw/solution-hw3/static/css/main.a6657865.css.map",
     "main.95fdc632.js.map": "/pui-hw/solution-hw3/static/js/main.95fdc632.js.map",
     "787.e7d93d16.chunk.js.map": "/pui-hw/solution-hw3/static/js/787.e7d93d16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f595d171.css",
+    "static/css/main.a6657865.css",
     "static/js/main.95fdc632.js"
   ]
 }
