@@ -13,12 +13,9 @@ const CartInfo = () => {
 
 function addToCart() {
     // To be completed
-}
-
-function glazingChange() {
-    // To be completed
+    console.log("added to cart");
 }
 
 
 
-export {CartInfo, addToCart, glazingChange}
+export {CartInfo, addToCart}
