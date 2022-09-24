@@ -8,6 +8,9 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
+        {/* To sharing the cart information among components, I used 
+            context following this tutorial: 
+            https://www.youtube.com/watch?v=hhAT0CJDWqM */}
         <Navbar></Navbar>
         <Grid></Grid>
         {/* 
