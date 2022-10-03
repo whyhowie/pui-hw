@@ -73,7 +73,7 @@ const strawberryCinnamon = new Roll(
     'strawberry-cinnamon-roll'
 )
 
-export const Rolls = [
+export const rolls = [
     originalCinnamon, appleCinnamon, raisinCinnamon,
     walnutCinnamon, doubleChocolateCinnamon, strawberryCinnamon
 ];

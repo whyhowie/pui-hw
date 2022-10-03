@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react';
 import { ItemsContext } from './ItemsContext'
-import { Rolls } from './Products'
+import { rolls } from './Products'
 import './SearchNSort.css'
 
 // https://www.youtube.com/watch?v=x7niho285qs
@@ -15,7 +15,7 @@ function SearchBox() {
 
     const handleSearch = () => {
         const searchTerm = searchRef.current.value
-        const allRolls = Rolls
+        const allRolls = rolls
         // Make sure we start from the original list when searching!
 
         // setListedRolls(

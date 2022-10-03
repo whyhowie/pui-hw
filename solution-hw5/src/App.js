@@ -5,7 +5,6 @@ import { CartView } from './CartInfo'
 import { CartProvider } from './CartContext';
 import { ItemsContext, ItemsProvider } from './ItemsContext';
 import { SearchNSort } from './SearchNSort';
-import { Rolls, glazings, packSizes } from './Products'
 import React, { useContext } from 'react';
 
 class App extends React.Component {
