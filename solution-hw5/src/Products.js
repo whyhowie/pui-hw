@@ -119,10 +119,10 @@ export const packSizes = [
     },
     {
         option: "6",
-        value: 6
+        value: 5
     },
     {
         option: "12",
-        value: 12
+        value: 10
     }
 ]

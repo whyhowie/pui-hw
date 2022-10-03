@@ -20,7 +20,8 @@ class Item extends React.Component {
             // These are default states:
             glazing: "Keep Original",
             glazingPrice: 0.00,
-            packSize: 1.00,
+            packSize: 1,
+            packMultiplier: 1.00,
             currentPrice: this.props.Roll.price, 
             glazingElement: this.#ItemOptions(this.props.Roll)[0],
             packSizeElement: this.#ItemOptions(this.props.Roll)[1]
@@ -58,12 +59,12 @@ class Item extends React.Component {
         packSizes.forEach(packSize => {
             packSizeOptionsElement.push( 
                     <input type="radio" name="radio" 
-                        key={eachRoll.elementID + "-" + packSize.value}
-                        id={eachRoll.elementID + "-" + packSize.value} 
+                        key={eachRoll.elementID + "-" + packSize.option}
+                        id={eachRoll.elementID + "-" + packSize.option} 
                         value={packSize.value} onChange={this.packSizeChange} />, // Don't forget the ","
                     <label className="radio-button-label" 
-                        key={eachRoll.elementID + "-" + packSize.value + "-label"}
-                        htmlFor={eachRoll.elementID + "-" + packSize.value}>{packSize.value}</label>
+                        key={eachRoll.elementID + "-" + packSize.option + "-label"}
+                        htmlFor={eachRoll.elementID + "-" + packSize.option}>{packSize.option}</label>
             );
         })
         packSizeElement = (
@@ -97,10 +98,14 @@ class Item extends React.Component {
     }
     
     packSizeChange = (event) => {
-        let selectedPackSize = parseFloat(event.target.value);
+        let selectedPackSize = parseFloat(event.target.id.replace( /^\D+/g, ''));
+        // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+
+        let selectedPackMultiplier = parseFloat(event.target.value);
         
         this.setState({
             packSize: selectedPackSize,
+            packMultiplier: selectedPackMultiplier,
         }, () => {
         this.updatePrice();
         });
@@ -110,7 +115,7 @@ class Item extends React.Component {
     }
 
     updatePrice = () => {
-        let priceOutput = (this.props.Roll.price + this.state.glazingPrice) * this.state.packSize;
+        let priceOutput = (this.props.Roll.price + this.state.glazingPrice) * this.state.packMultiplier;
         // console.log(priceOutput);
         this.setState({
             currentPrice: priceOutput.toFixed(2),
@@ -122,7 +127,7 @@ class Item extends React.Component {
         const setCart = this.context[1]
         const setIsAddingToCart = this.context[3]
         const addedItem = {
-            imgSrc: this.props.Roll.imgSrc,
+            imgSrc: process.env.PUBLIC_URL + this.props.Roll.imgSrc,
             name: this.props.Roll.type, 
             glazing: this.state.glazing,
             packSize: this.state.packSize,
