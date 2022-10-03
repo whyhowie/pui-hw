@@ -1,0 +1,26 @@
+/* ALL FONT STYLES ARE DEFINED HERE!!! */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  max-width: 1920px;
+  min-width: 1000px;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow: scroll; /* Show scrollbars */
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}

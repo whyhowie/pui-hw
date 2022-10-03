@@ -1,0 +1,103 @@
+/* Cart Info */
+.cart-info {
+    font-size: 12px;
+    /* background-color: sienna; */
+    padding: 10px;
+    width: auto;
+    /* margin-right: 30%; */
+    margin-left: auto;
+    font-weight: bold;
+    float: inline-end;
+    text-align: right;
+}
+
+/* Cart Popup */
+.cart-popup {
+    position: absolute;
+    /* Note: it's parent element needs "relative" position */
+    text-align: left;
+    top: 80px;
+    right: 10%;
+    z-index: 10;
+    background-color: white;
+    opacity: 0;
+    width: 200px;
+    color: black;
+    border: black solid 1px;
+    padding: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.show {
+    opacity: 1;
+    transition: opacity 1s ease-in-out ;
+}
+
+.popuptext {
+    font-size: 12px;
+    /* font-weight: bold; */
+    text-align: left;
+    align-items: left;
+}
+
+
+
+/* Cart View */
+.cart-view {
+    /* background-color: aquamarine; */
+    /* opacity: 1; */
+    /* height: 0px; */
+    border-top: 10px solid saddlebrown;
+    border-bottom: 10px solid saddlebrown;
+    /* transition: all 1s ease-in-out; */
+    overflow: hidden;
+}
+
+
+.cart-view h4 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.cart-view-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    column-gap: 10px;
+    padding: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    /* https://stackoverflow.com/questions/47601564/equal-width-columns-in-css-grid */
+    /* border: 2px solid brown; */
+}
+
+.cart-view-title-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: seagreen; */
+}
+
+.cart-view-item > img {
+    width: 60%;
+    /* height: 0; */
+    /* padding-bottom: 60%; */
+    /* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+    max-width: 300px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    /* margin-bottom: -10%; */
+}
+
+.cart-view-text {
+    font-size: 14px;
+    /* font-weight: bold; */
+    /* text-align: left;
+    align-items: left; */
+}
