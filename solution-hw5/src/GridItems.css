@@ -120,7 +120,8 @@ fieldset .price {
     background-color: yellow;
 }
 
-.radio-group input[type="radio"]:checked + label {
+/* .radio-group input[type="radio"]:checked + label {
     background: gray;
-}
-
+} */
+/* This is temporarily disabled to demonstrate 
+    conditional styling */

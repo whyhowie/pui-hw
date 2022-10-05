@@ -22,15 +22,16 @@ class Item extends React.Component {
             glazingPrice: 0.00,
             packSize: 1,
             packMultiplier: 1.00,
-            currentPrice: this.props.Roll.price, 
-            glazingElement: this.#ItemOptions(this.props.Roll)[0],
-            packSizeElement: this.#ItemOptions(this.props.Roll)[1]
+            currentPrice: this.props.roll.price, 
+            // glazingElement: this.#ItemOptions(this.props.roll)[0],
+            // packSizeElement: this.#ItemOptions(this.props.roll)[1]
         };
         
         this.ItemOptions = this.#ItemOptions.bind(this);
         // https://reactjs.org/docs/handling-events.html
 
     }
+
 
     
     // Generate HTML components for glazing and pack size of each Roll
@@ -48,15 +49,22 @@ class Item extends React.Component {
             );
         })
         glazingElement = (
-            <select name="glazing" id={"glazing" + this.props.Roll.elementID} onChange={this.glazingChange}>
+            <select name="glazing" id={"glazing" + this.props.roll.elementID} onChange={this.glazingChange}>
                 {glazingOptionsElement}
             </select>
         )
     
+        
         // Add pack size radio buttons
         let packSizeElement = null;
         let packSizeOptionsElement = [];
         packSizes.forEach(packSize => {
+            let isSelected = parseInt(packSize.option)==this.state.packSize
+            let radioButtonStyle = {background: isSelected ? 'gray' : 'white',}
+            // This is a demo for inline conditional styling 
+            // (may be removed later since css can get it done as well;
+            //  besides, pseudoclasses are not really supported)
+
             packSizeOptionsElement.push( 
                     <input type="radio" name="radio" 
                         key={eachRoll.elementID + "-" + packSize.option}
@@ -64,11 +72,13 @@ class Item extends React.Component {
                         value={packSize.value} onChange={this.packSizeChange} />, // Don't forget the ","
                     <label className="radio-button-label" 
                         key={eachRoll.elementID + "-" + packSize.option + "-label"}
-                        htmlFor={eachRoll.elementID + "-" + packSize.option}>{packSize.option}</label>
+                        htmlFor={eachRoll.elementID + "-" + packSize.option}
+                        style={radioButtonStyle}
+                        >{packSize.option}</label>
             );
         })
         packSizeElement = (
-            <div className="radio-group" id={"radio-group-" + this.props.Roll.elementID}>
+            <div className="radio-group" id={"radio-group-" + this.props.roll.elementID}>
                 {packSizeOptionsElement}
             </div>
         )
@@ -103,6 +113,7 @@ class Item extends React.Component {
 
         let selectedPackMultiplier = parseFloat(event.target.value);
         
+
         this.setState({
             packSize: selectedPackSize,
             packMultiplier: selectedPackMultiplier,
@@ -115,7 +126,7 @@ class Item extends React.Component {
     }
 
     updatePrice = () => {
-        let priceOutput = (this.props.Roll.price + this.state.glazingPrice) * this.state.packMultiplier;
+        let priceOutput = (this.props.roll.price + this.state.glazingPrice) * this.state.packMultiplier;
         // console.log(priceOutput);
         this.setState({
             currentPrice: priceOutput.toFixed(2),
@@ -127,12 +138,12 @@ class Item extends React.Component {
         const setCart = this.context[1]
         const setIsAddingToCart = this.context[3]
         const addedItem = {
-            imgSrc: process.env.PUBLIC_URL + this.props.Roll.imgSrc,
-            name: this.props.Roll.type, 
+            imgSrc: process.env.PUBLIC_URL + this.props.roll.imgSrc,
+            name: this.props.roll.type, 
             glazing: this.state.glazing,
             packSize: this.state.packSize,
             price: this.state.currentPrice,
-            inCartID: this.props.Roll.elementID + "-" + Math.floor(Math.random() * 9999)
+            inCartID: this.props.roll.elementID + "-" + Math.floor(Math.random() * 9999)
         }
         setCart(currentCart => [...currentCart, addedItem])
         setIsAddingToCart(true)
@@ -141,21 +152,23 @@ class Item extends React.Component {
 
     render() {
         return (
-            <div className="grid-item" id={this.props.Roll.elementID}>
-                <img src={process.env.PUBLIC_URL + this.props.Roll.imgSrc} alt={this.props.Roll.type}/>
+            <div className="grid-item" id={this.props.roll.elementID}>
+                <img src={process.env.PUBLIC_URL + this.props.roll.imgSrc} alt={this.props.roll.type}/>
                
                 
-                <h5>{this.props.Roll.type}</h5>
-                <form id={this.props.Roll.elementID + "-form"}>
+                <h5>{this.props.roll.type}</h5>
+                <form id={this.props.roll.elementID + "-form"}>
                     <fieldset>
 
-                        <label htmlFor={"glazing-" + this.props.Roll.elementID}>Glazing:</label>
-                        {this.state.glazingElement}
+                        <label htmlFor={"glazing-" + this.props.roll.elementID}>Glazing:</label>
+                        {/* {this.state.glazingElement} */}
+                        {this.#ItemOptions(this.props.roll)[0]}
 
-                        <label htmlFor={"radio-group-" + this.props.Roll.elementID}>Pack size:</label>
-                        {this.state.packSizeElement}
+                        <label htmlFor={"radio-group-" + this.props.roll.elementID}>Pack size:</label>
+                        {/* {this.state.packSizeElement} */}
+                        {this.#ItemOptions(this.props.roll)[1]}
 
-                        <div className="price" id={"price-" + this.props.Roll.elementID}>${this.state.currentPrice}</div>
+                        <div className="price" id={"price-" + this.props.roll.elementID}>${this.state.currentPrice}</div>
                         <input type="button" value="Add to Cart" onClick={() => (this.addToCart(this))} />
                     </fieldset>
                 </form>
@@ -181,7 +194,7 @@ function Grid(props) {
              
             // Insert Item
             gridContent.push(
-                <Item Roll={eachRoll} key={"item-"+eachRoll.elementID}/>
+                <Item roll={eachRoll} key={"item-"+eachRoll.elementID}/>
             );
         })
     }

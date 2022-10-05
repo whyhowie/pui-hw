@@ -18,11 +18,6 @@ function SearchBox() {
         const allRolls = rolls
         // Make sure we start from the original list when searching!
 
-        // setListedRolls(
-        //     listedRolls.filter( eachListedRoll => {
-        //         eachListedRoll.type.toLowerCase().includes(searchRef.current.value.toLowerCase())
-        //     })
-        // )
         setListedRolls(allRolls.filter( eachListedRoll => {
                 return eachListedRoll.type.toLowerCase().includes(searchTerm.toLowerCase())
             })
@@ -39,6 +34,7 @@ function SearchBox() {
                     // onChange={handleSearch}
                     />
                 <button type="button" onClick={handleSearch} className="search-button"> Search </button>
+                {/* https://bobbyhadz.com/blog/react-get-input-value */}
             </div>
         
         </div>
