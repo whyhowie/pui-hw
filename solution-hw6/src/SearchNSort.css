@@ -1,0 +1,48 @@
+.search-n-sort {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* Search input */
+.search {
+    width: 40%;
+}
+
+.search input {
+    /* border: solid 3px black; */
+    width: 300px;
+    height: 30px;
+    /* margin: 5px; */
+    /* padding: 10px 5px; */
+}
+
+.search button {
+    width: 100px;
+    margin: auto 2px;
+    height: 35px;
+}
+
+.search button:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+
+
+/* Sort by */
+.sort-by {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort-select {
+    width: 150px;
+    margin: 5px;
+    height: 35px;
+    /* border: solid 1px black; */
+}
